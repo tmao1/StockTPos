@@ -3,8 +3,17 @@ space-before-function-paren, no-traiing-spaces */
 
 const expect = require('chai').expect;
 const Stock = require('../lib/stock');
+const nock = require('nock');
 
 describe('Stock', () => {
+  beforeEach(() => {
+    nock('http://dev.markitondemand.com/')
+      .get('/MODApis/Api/v2/Quote/json?symbol=AAPL')
+      .reply(200, {
+        Name: 'Apple Inc',
+        LastPrice: 100,
+      });
+  })
   describe('constructor', () => {
     it('should construct a new Stock object', () => {
       const s1 = new Stock('aapl');
@@ -17,10 +26,11 @@ describe('Stock', () => {
       const s1 = new Stock('aapl');
       s1.purchase(50, (err, totalPaid) => {
         expect(err).to.be.null;
-        expect(totalPaid).to.be.above(0);
+//        expect(s1.purchaseDate.getTime()).to.equal(23143213414)
+        expect(totalPaid).to.be.equal(5000);
         expect(s1.shares).to.equal(50);
         expect(s1.name).to.equal('Apple Inc');
-        expect(s1.purchasePricePerShare).to.be.above(0);
+        expect(s1.purchasePricePerShare).to.equal(100);
         done();
       });
     });
