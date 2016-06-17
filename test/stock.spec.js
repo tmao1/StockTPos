@@ -69,4 +69,15 @@ describe('Stock', () => {
       });
     });
   });
+
+  describe('.getQuote', () => {
+    it('should get a price for a target stock', (done) => {
+      const symbol = 'AAPL';
+      Stock.getQuote(symbol, (err, currentPrice) => {
+        expect(err.message).to.be.null;
+        expect(currentPrice).to.equal(100);
+        done();
+      });
+    });
+  });
 });
