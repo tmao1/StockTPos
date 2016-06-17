@@ -1,0 +1,32 @@
+pairs:
+  am: Alex Mitzman
+  bs: Bal Saini
+  ch: Chuck Hedrick
+  dc: Daniel Crussi
+  dm: Daryl McGhee
+  do: Don Owino
+  em: Eileen McFarland
+  ei: Elijah Itah
+  eg: Evan Gryska
+  hs: Henry Seifert
+  js: Jayam Subramanyam
+  jf: Joe Fontana
+  ji: Joe Irons
+  jz: John Zhang
+  mc: Michael Coonrod
+  mj: MJ Kubba
+  nr: Nithya Rao
+  ot: Olga Talovikova
+  rj: Rich Jardine
+  rz: Rich Zemke
+  rb: Rodolfo Ballesteros
+  sa: Scott Albers
+  sw: Shawn Wilkinson
+  ss: Steven Snow
+  sn: Syed Nabeel
+  tl: Tiffany Larson
+  tm: Tony Mao
+email:
+  prefix: pair
+  domain: allstate.com
+  no_solo_prefix: true
