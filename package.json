@@ -12,21 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tmao1/BankMGR.git"
+    "url": "git+https://github.com/tmao1/StockTPos.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tmao1/BankMGR/issues"
+    "url": "https://github.com/tmao1/StockTPos/issues"
   },
-  "homepage": "https://github.com/tmao1/BankMGR#readme",
+  "homepage": "https://github.com/tmao1/StockTPos#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "chokidar-cli": "^1.2.0",
     "eslint": "^2.12.0",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.1",
-    "eslint-plugin-jsx-a11y": "^1.4.2",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
     "eslint-plugin-react": "^5.1.1",
     "mocha": "^2.5.3",
     "request": "^2.72.0"
