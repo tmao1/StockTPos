@@ -49,12 +49,11 @@ describe('Stock', () => {
   describe('#sell', () => {
     it('should sell stock', (done) => {
       const s2 = new Stock('aapl');
-      s2.purchase(100, (err, totalPaid) => {
+      s2.purchase(100, () => {
         s2.sell(50, (err, totalCashRefund) => {
           expect(err).to.be.null;
           expect(totalCashRefund).to.equal(5000);
-          expect(s2.name).to.equal('Apple Inc');
-          expect(s2.sellPricePerShare).to.be.above(0);
+          expect(s2.sellPricePerShare).to.equal(100);
           done();
         });
       });
@@ -63,12 +62,11 @@ describe('Stock', () => {
     it('should not sell stock if there are not enough shares', (done) => {
       const s2 = new Stock('aapl');
       s2.shares = 100;
-        s2.sell(200, (err) => {
-          expect(err.message).to.equal('Not enough shares');
-          expect(s2.shares).to.equal(100);
-          done();
-        });
+      s2.sell(200, (err) => {
+        expect(err.message).to.equal('Not enough shares');
+        expect(s2.shares).to.equal(100);
+        done();
+      });
     });
-
   });
 });
